@@ -1,0 +1,12 @@
+{
+    "sqltools.useNodeRuntime": true,
+    "sqltools.connections": [
+        {
+            "previewLimit": 50,
+            "driver": "SQLite",
+            "name": "jobData",
+            "group": "SQLLite",
+            "database": "./data/occupationData.db"
+        }
+    ]
+}

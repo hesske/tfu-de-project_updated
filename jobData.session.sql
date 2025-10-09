@@ -1,5 +1,5 @@
 
-
+/*
 CREATE TABLE IF NOT EXISTS dimAltTitles (
     Alt_Title_ID INTEGER PRIMARY KEY AUTOINCREMENT,
     ONET_SOC_Code VARCHAR(10),
@@ -10,7 +10,7 @@ CREATE TABLE IF NOT EXISTS dimAltTitles (
     FOREIGN KEY (ONET_SOC_Code) REFERENCES factJobSkills(ONET_SOC_Code)
 );
 
-/*
+
 CREATE TABLE IF NOT EXISTS dimTasks (
     ID INTEGER PRIMARY KEY AUTOINCREMENT,
     ONET_SOC_Code VARCHAR(10),
@@ -30,6 +30,8 @@ CREATE TABLE IF NOT EXISTS dimTechSkills (
     Example VARCHAR(150),
     Commodity_Code INTEGER(8),
     Commodity_Title VARCHAR(150),
+    Hot_Tech BOOLEAN,
+    In_Demand BOOLEAN,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     FOREIGN KEY (ONET_SOC_Code) REFERENCES factJobSkills(ONET_SOC_Code)
 );
@@ -75,6 +77,8 @@ CREATE TABLE IF NOT EXISTS factJobSkills (
     ONET_SOC_Code VARCHAR(10),
     Skill_ID INTEGER(8), 
     FOREIGN KEY(Skill_ID) REFERENCES dimSkills(ID),
+    Tech_Skill_ID INTEGER(8),
+    FOREIGN KEY(Tech_Skill_ID) REFERENCES dimTechSkills(ID),
     Job_ID INTEGER(8),
     FOREIGN KEY(Job_ID) REFERENCES dimJobInfo(ID),
     Job_Title VARCHAR(150),

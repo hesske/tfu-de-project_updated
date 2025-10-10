@@ -209,3 +209,4 @@ __marimo__/
 #executable/system files
 *.exe
 *.dll
+data/occupationData.db

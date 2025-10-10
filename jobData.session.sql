@@ -55,8 +55,7 @@ CREATE TABLE IF NOT EXISTS dimSkills (
     Skill_element_ID VARCHAR(20),
     Skill VARCHAR(150),
     Scale_ID VARCHAR(3),
-    Scale_Name FLOAT(5,2),
-    Rating INTEGER(4),
+    Scale_Value FLOAT(5,2),
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     FOREIGN KEY (ONET_SOC_Code) REFERENCES factJobSkills(ONET_SOC_Code)
 );

@@ -1,5 +1,4 @@
 # Data Warehouse with Occupation Data Project
-# TFU Data Engineering Project
 
 A data warehouse implementation using SQLite with a Python-based ETL pipeline for job skill analysis using O*NET occupational data.
 

@@ -11,13 +11,27 @@ SELECT
     s.ONET_SOC_Code,
     s.Element_ID,
     s.Skill,
-    t.Commodity_Code,
-    t.Commodity_Title,
+    111111 as Tech_Skill_Key,
+    "NA" as Tech_Skill_Name,
     j.Title,
     CURRENT_TIMESTAMP
 FROM
     dimSkills s
 LEFT JOIN
     dimJobInfo j ON s.ONET_SOC_Code = j.ONET_SOC_Code
+
+
+UNION
+
+SELECT
+    t.ONET_SOC_Code,
+    222222 as Element_ID,
+    "NA" as Skill,
+    t.Commodity_Code,
+    t.Commodity_Title,
+    j.Title,
+    CURRENT_TIMESTAMP
+FROM
+    dimTechSkills t
 LEFT JOIN
-    dimTechSkills t ON j.ONET_SOC_Code = t.ONET_SOC_Code
+    dimJobInfo j ON t.ONET_SOC_Code = j.ONET_SOC_Code

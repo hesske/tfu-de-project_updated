@@ -37,7 +37,6 @@ def run_jupyter_notebook(notebook_path, output_notebook_path=None):
         print(f"An error occurred during notebook execution: {e}")
 
 if __name__ == "__main__":
-    run_jupyter_notebook('./get_files.ipynb', './get_files_output.ipynb')
-    run_jupyter_notebook('./transform_data.ipynb', './transform_data_output.ipynb')
-    run_jupyter_notebook('./insert_data.ipynb', './insert_data_output.ipynb')
-    
+    run_jupyter_notebook("./python/get_files.ipynb", './get_files_output.ipynb')
+    run_jupyter_notebook("./python/transform_data.ipynb", './transform_data_output.ipynb')
+    run_jupyter_notebook("./python/insert_data.ipynb", './insert_data_output.ipynb')

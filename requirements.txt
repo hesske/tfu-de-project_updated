@@ -1,0 +1,7 @@
+ipykernel==7.0.0
+nbconvert==7.16.6
+pipdeptree==2.29.0
+tinycss2==1.4.0
+pandas==2.3.3
+pandera==0.26.1
+nbformat==5.10.4
